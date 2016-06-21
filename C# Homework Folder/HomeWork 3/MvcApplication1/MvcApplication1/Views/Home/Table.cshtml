@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Table";
+}
+
+<h2>Task :- 2 (N*N Multiplictation Table) </h2>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+</style>
+<table>
+    <tr>
+        <th></th>
+    </tr>
+
+    @for (int i = 1; i <= @ViewBag.Name; i++)
+    {
+        <tr>
+            @for (int j = 1; j <= @ViewBag.Name; j++)
+            {
+                <td>
+                    @(i * j + " ")
+                </td>
+            }
+
+        </tr>
+    }
+
+</table>

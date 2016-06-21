@@ -1,0 +1,76 @@
+﻿@model HomeWork4.Models.Customer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <style>
+
+        h2 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; text-align: center; }
+        .display-label {
+            font-family:Algerian;color:blueviolet;font-size:larger
+        }
+
+
+     </style>
+</head>
+<body>
+    <h2>Customer Details</h2>
+    <fieldset>
+        <legend>Customer</legend>
+
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.fname)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.fname)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.lname)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.lname)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.country)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.country)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.state)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.state)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.member_since)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.member_since)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Contact)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Contact)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id=Model.customerid }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
